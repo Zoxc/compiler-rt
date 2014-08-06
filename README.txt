@@ -196,6 +196,14 @@ long double _Complex __divtc3(long double a, long double b,
 
 //         Runtime support
 
+// __probestack() is used to touch all pages of `size` bytes which will
+// later be allocated relative to the call site's stack pointer. It assumes
+// that the first and the last byte after the allocation will be touched by
+// something else. It has a custom platform specific calling convention.
+// This function is not available on Windows platforms as those have their
+// own builtins.
++void __probestack(du_int size);
+
 // __clear_cache() is used to tell process that new instructions have been
 // written to an address range.  Necessary on processors that do not have
 // a unified instuction and data cache.

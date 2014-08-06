@@ -140,6 +140,7 @@ set(x86_64_SOURCES
   x86_64/floatundidf.S
   x86_64/floatundisf.S
   x86_64/floatundixf.S
+  x86_64/probestack.S
   ${GENERIC_SOURCES})
 
 set(i386_SOURCES
@@ -155,6 +156,7 @@ set(i386_SOURCES
   i386/lshrdi3.S
   i386/moddi3.S
   i386/muldi3.S
+  i386/probestack.S
   i386/udivdi3.S
   i386/umoddi3.S
   ${GENERIC_SOURCES})
